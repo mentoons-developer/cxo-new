@@ -15,11 +15,6 @@
 }
 
 @font-face {
-  font-family: "heading1";
-  src: url("./assets/fonts/bodoni/BodoniModa_72pt-ExtraBold.ttf");
-}
-
-@font-face {
   font-family: "para";
   src: url("./assets/fonts/sans/GeneralSans-Medium.ttf");
 }
@@ -29,8 +24,8 @@
   --font-size-2: 1.5rem;
   --font-size-3: 1.2rem;
   --font-size-4: 0.7rem;
-  --font-heading: "heading";
-  --font-heading1: "heading1";
+  --font-heading: "Times New Roman", Times, serif;
+  --font-heading1: "heading";
 }
 
 body {
@@ -132,7 +127,7 @@ h3 {
 
 .video-wrap p {
   font-size: var(--font-size-2);
-  font-family: "heading";
+  font-family: var(--font-heading);
   line-height: 0.99;
 }
 
@@ -441,22 +436,31 @@ td {
 .newsletter {
   border: 1px solid rgb(0, 0, 0);
   border-radius: 3rem;
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
   padding: 0.3rem;
   font-size: var(--font-size-3);
+  min-height: 4rem;
+
+  position: relative;
 }
 
 .newsletter input {
+  position: absolute;
+  left: 0.4rem;
   outline: none;
   border: 0;
   background-color: #e2e2e2;
   border-radius: 2rem 0 0 2rem;
   font-size: 1rem;
   padding-left: 1rem;
+
+  min-height: 3rem;
 }
 
 .newsletter button {
+  position: absolute;
+  right: 0.4rem;
   outline: none;
   border: 0;
   padding: 1rem 2rem;
