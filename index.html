@@ -7,7 +7,17 @@
     <title>CXO Branding</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
+
   <body>
+    <script>
+      var submitted = false;
+    </script>
+    <iframe
+      name="hiddenConfirm"
+      id="hiddenConfirm"
+      style="display: none"
+      onload="if(submitted){window.location='submission.html'}"
+    ></iframe>
     <div class="homepage">
       <div class="header">
         <p>03 OCT, 2022</p>
@@ -28,66 +38,76 @@
           <p>Contact</p>
         </div>
       </div>
-
-      <div class="herosec">
-        <div class="video-wrap">
-          <div>
-            <h3>Get Hired <span style="color: #f4bb44"> Faster</span></h3>
-            <iframe
-              src="https://www.youtube.com/embed/_9ibEA3AqDo"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <p>All-in-one Career solution for the C-suite.</p>
-          </div>
+      <div>
+        <div class="herosec">
+          <!-- <div class="video-wrap">
+            <div>
+              <h3>Get Hired <span style="color: #f4bb44"> Faster</span></h3>
+              <iframe
+                src="https://www.youtube.com/embed/_9ibEA3AqDo"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <p>All-in-one Career solution for the C-suite.</p>
+            </div>
+          </div> -->
+        </div>
+        <div class="services">
+          <ul>
+            <li>
+              <img src="./assets/icons/resume-writing.png" alt="" srcset="" />
+              <p>
+                Resume <br />
+                Writing
+              </p>
+            </li>
+            <li>
+              <img
+                src="./assets/icons/job-search-advice.png"
+                alt=""
+                srcset=""
+              />
+              <p>
+                Job-Search <br />
+                Advice
+              </p>
+            </li>
+            <li>
+              <img
+                src="./assets/icons/personal-branding solutions.png"
+                alt=""
+                srcset=""
+              />
+              <p>
+                Personal <br />
+                Branding
+              </p>
+            </li>
+            <li>
+              <img
+                src="./assets/icons/social-media-management.png"
+                alt=""
+                srcset=""
+              />
+              <p>
+                Social Profile <br />
+                Management
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
 
-    <div class="services">
-      <ul>
-        <li>
-          <img src="./assets/icons/resume-writing.png" alt="" srcset="" />
-          <p>
-            Resume <br />
-            Writing
-          </p>
-        </li>
-        <li>
-          <img src="./assets/icons/job-search-advice.png" alt="" srcset="" />
-          <p>Job-search Advice</p>
-        </li>
-        <li>
-          <img
-            src="./assets/icons/personal-branding solutions.png"
-            alt=""
-            srcset=""
-          />
-          <p>
-            Personal <br />
-            Branding
-          </p>
-        </li>
-        <li>
-          <img
-            src="./assets/icons/social-media-management.png"
-            alt=""
-            srcset=""
-          />
-          <p>Social Profile Management</p>
-        </li>
-      </ul>
-    </div>
-
     <div class="resume">
       <div class="resume-heading">
-        <h2 class="spacedown">
+        <h2 class="spacedown res">
           Resume
           <span style="color: #f4bb44">
             <br />
-            writing</span
+            Writing</span
           >
         </h2>
         <div class="contact">
@@ -100,11 +120,69 @@
         <div class="resume-heading">
           <h3>View <span style="color: #f4bb44"> samples</span></h3>
         </div>
-        <div class="resume-imgs">
-          <img src="./assets/arun1 2.png" alt="" srcset="" />
-          <img src="./assets/arun1 2.png" alt="" srcset="" />
+        <div class="avatars-container">
+          <div class="avatars">
+            <img
+              id="firstslide"
+              class="avatar-item"
+              src="./assets/resume-samples/1.jpeg"
+              alt=""
+              srcset=""
+            /><img
+              class="avatar-item"
+              src="./assets/resume-samples/10.jpeg"
+              alt=""
+              srcset=""
+            /><img
+              class="avatar-item"
+              src="./assets/resume-samples/3.jpeg"
+              alt=""
+              srcset=""
+            /><img
+              class="avatar-item"
+              src="./assets/resume-samples/4.jpeg"
+              alt=""
+              srcset=""
+            /><img
+              class="avatar-item"
+              src="./assets/resume-samples/5.jpeg"
+              alt=""
+              srcset=""
+            />
+            <img
+              class="avatar-item"
+              src="./assets/resume-samples/6.jpeg"
+              alt=""
+              srcset=""
+            />
+            <img
+              class="avatar-item"
+              src="./assets/resume-samples/7.jpeg"
+              alt=""
+              srcset=""
+            /><img
+              class="avatar-item"
+              src="./assets/resume-samples/8.jpeg"
+              alt=""
+              srcset=""
+            /><img
+              class="avatar-item"
+              src="./assets/resume-samples/9.jpeg"
+              alt=""
+              srcset=""
+            /><img
+              class="avatar-item"
+              id="lastslide"
+              src="./assets/resume-samples/2.jpeg"
+              alt=""
+              srcset=""
+            />
+          </div>
         </div>
-        <div class="arrow"><strong> ← </strong> <strong> →</strong></div>
+        <div class="arrow">
+          <strong class="left"> ← </strong>
+          <strong class="right"> →</strong>
+        </div>
       </div>
 
       <div class="our-process">
@@ -166,9 +244,9 @@
 
       <div class="testimonials">
         <div class="resume-heading">
-          <h3><span style="color: #f4bb44"> Testimonials</span></h3>
+          <h3>Testimonials</h3>
         </div>
-        <div class="list">
+        <!-- <div class="list">
           <div class="list1">
             <p>
               “It was a pleasure working with the people at CXO Branding. I am
@@ -181,7 +259,110 @@
                 IT Sales & Project Management Professional; Singapore.</span
               >
             </p>
-            <div class="arrow"><span> ← </span> <span> → </span></div>
+          </div>
+          <div class="arrow"><span> ← </span> <span> → </span></div>
+        </div> -->
+
+        <div class="slider">
+          <div class="slide-track">
+            <div class="slide">
+              <div class="list1">
+                <p>
+                  “It was a pleasure working with the people at CXO Branding. I
+                  am extremely happy with their work. I am sure they will have
+                  many success stories in the years ahead! “
+                </p>
+                <p style="font-size: 0.84rem">
+                  <span style="color: #f4bb44">
+                    Confidential: IT Sales & Project Management Professional;
+                    Singapore.</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="list1">
+                <p>
+                  “My experience with Mahesh of CXO Branding has exceeded my
+                  very high expectations. I appreciate the attention to detail;
+                  the ability to profile my career & compile my past and current
+                  career experiences into a wonderful summary & biography. I
+                  would highly recommend him to anyone looking for these types
+                  of services”.
+                </p>
+                <p style="font-size: 0.84rem">
+                  <span style="color: #f4bb44">
+                    Confidential: Group Head – Marketing & Product Planning |
+                    Consumer Durables.
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="list1">
+                <p>
+                  “Mahesh’s interactive skills and patience helps in creating
+                  individual brand value by probing and restructuring resume in
+                  unbelievable way”.
+                </p>
+                <p style="font-size: 0.84rem">
+                  <span style="color: #f4bb44"
+                    >Confidential: Group CIO with experience in Telecom ,
+                    Healthcare & Logistics,
+                  </span>
+                </p>
+              </div>
+            </div>
+
+            <!-- herex -->
+            <div class="slide hide-slide">
+              <div class="list1">
+                <p>
+                  “It was a pleasure working with the people at CXO Branding. I
+                  am extremely happy with their work. I am sure they will have
+                  many success stories in the years ahead! “
+                </p>
+                <p style="font-size: 0.84rem">
+                  <span style="color: #f4bb44">
+                    Confidential: IT Sales & Project Management Professional;
+                    Singapore.</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="slide hide-slide">
+              <div class="list1">
+                <p>
+                  “My experience with Mahesh of CXO Branding has exceeded my
+                  very high expectations. I appreciate the attention to detail;
+                  the ability to profile my career & compile my past and current
+                  career experiences into a wonderful summary & biography. I
+                  would highly recommend him to anyone looking for these types
+                  of services”.
+                </p>
+                <p style="font-size: 0.84rem">
+                  <span style="color: #f4bb44">
+                    Confidential: Group Head – Marketing & Product Planning |
+                    Consumer Durables.
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div class="slide hide-slide">
+              <div class="list1">
+                <p>
+                  “Mahesh’s interactive skills and patience helps in creating
+                  individual brand value by probing and restructuring resume in
+                  unbelievable way”.
+                </p>
+                <p style="font-size: 0.84rem">
+                  <span style="color: #f4bb44"
+                    >Confidential: Group CIO with experience in Telecom ,
+                    Healthcare & Logistics,
+                  </span>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -190,9 +371,16 @@
     <div class="job-search">
       <div class="resume-heading">
         <h2>
-          Job search <br />
-          <span style="color: #f4bb44"> advice</span>
+          Job Search <br />
+          <span style="color: #f4bb44; margin-left: -0.24rem"> Advice</span>
         </h2>
+        <button
+          style="border: 0; cursor: pointer"
+          id="open-form"
+          class="contact"
+        >
+          Get Advice
+        </button>
         <p>
           Best opportunities go to prople with right career strategy and who are
           well prepared.
@@ -214,8 +402,8 @@
     <div class="personal-branding">
       <div class="resume-heading">
         <h2>
-          Personal branding <br />
-          <span style="color: #f4bb44"> solutions</span>
+          Personal Branding <br />
+          <span style="color: #f4bb44; margin-left: -0.2rem"> Solutions</span>
         </h2>
         <p>
           Your pesonal brand is very vital to you professionally. It is how you
@@ -317,8 +505,8 @@
     <div class="social-profile">
       <div class="resume-heading">
         <h2>
-          Social profile<br />
-          <span style="color: #f4bb44">management</span>
+          Social Profile<br />
+          <span style="color: #f4bb44">Management</span>
         </h2>
         <h3>Globalize your reach!</h3>
         <p>
@@ -443,19 +631,26 @@
 
     <div class="footer">
       <div class="resume-heading">
-        <h2>
-          Subscribe our <br />
+        <h3 style="font-size: 3.3rem">
+          CXO's
           <span style="color: #f4bb44">Newsletter</span>
-        </h2>
+        </h3>
       </div>
-      <div class="newsletter">
+      <form
+        action="https://docs.google.com/forms/d/e/1FAIpQLSf3PKdG-ifTZDxDw0VyerGrfxh39Ir91TYbhD367EJsXBuCjg/formResponse"
+        class="newsletter"
+        method="post"
+        target="hiddenConfirm"
+        onsubmit="submitted=true"
+      >
         <input
           type="text"
-          name="email"
+          name="entry.1290487271"
           placeholder="Enter Email address"
-          id=""
+          id="newsletter"
+          required
         />
-        <button type="submit">
+        <button type="submit" style="cursor: pointer">
           Subscribe
           <span>
             <img
@@ -465,7 +660,7 @@
               srcset=""
           /></span>
         </button>
-      </div>
+      </form>
       <div class="social">
         <img src="./assets/icons/twitter.png" alt="" srcset="" />
         <img src="./assets/icons/linkedin.png" alt="" srcset="" />
@@ -477,5 +672,163 @@
         <p>Terms & Conditions</p>
       </div>
     </div>
+    <div class="advice-form-wrapper">
+      <form
+        class="advice-form"
+        style="display: flex; flex-direction: column; max-width: 14rem"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSeSe2-XClbv7LZR4eMm7OgXjsY6zswnWwPUbLrTVV-dSnIPaw/formResponse"
+        method="post"
+        target="hiddenConfirm"
+        onsubmit="submitted=true"
+      >
+        <div class="close-form">x</div>
+        <p>Kindly fill the form below!</p>
+        <input
+          required
+          placeholder="name"
+          name="entry.1265337002"
+          type="text"
+          id=""
+          minlength="4"
+          maxlength="20"
+        />
+        <div class="gender">
+          <div>
+            <input
+              required
+              name="entry.1739925046"
+              type="radio"
+              value="Male"
+              id=""
+            />
+            <label for="entry.1739925046">Male</label>
+          </div>
+          <div>
+            <input
+              required
+              name="entry.1739925046"
+              type="radio"
+              value="Female"
+              id=""
+            />
+            <label for="entry.1739925046">Female</label>
+          </div>
+          <div>
+            <input
+              required
+              name="entry.1739925046"
+              type="radio"
+              value="Prefer not to say"
+              id=""
+            />
+            <label for="entry.1739925046">Prefer not to say</label>
+          </div>
+        </div>
+        <input
+          required
+          placeholder="age"
+          name="entry.317558365"
+          type="number"
+          id=""
+          minlength="2"
+          maxlength="2"
+        />
+        <input
+          required
+          placeholder="contact"
+          name="entry.1431518457"
+          type="number"
+          id=""
+          minlength="9"
+          maxlength="13"
+        />
+        <input
+          required
+          placeholder="email"
+          name="entry.1888570129"
+          type="email"
+          id=""
+        />
+        <input
+          required
+          placeholder="url"
+          name="entry.334923532"
+          type="url"
+          id="firebaseUrl"
+          style="display: none"
+        />
+        <textarea
+          placeholder="note"
+          name="entry.1628468164"
+          id=""
+          rows="4"
+          minlength="10"
+          maxlength="120"
+        ></textarea>
+        <div>
+          <input required type="file" id="files" />
+          <progress
+            style="display: none"
+            value="0"
+            max="100"
+            id="progress"
+          ></progress>
+        </div>
+        <button disabled id="submit" type="submit">Submit</button>
+      </form>
+    </div>
+    <script>
+      const adviceFormWrapper = document.querySelector(".advice-form-wrapper");
+      const adviceForm = document.querySelector(".advice-form");
+
+      document
+        .querySelector(".close-form")
+        .addEventListener("click", function () {
+          adviceFormWrapper.style.display = "none";
+        });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          adviceFormWrapper.style.display = "none";
+        }
+      });
+
+      document
+        .querySelector("#open-form")
+        .addEventListener("click", function () {
+          adviceFormWrapper.style.display = "block";
+        });
+
+      adviceFormWrapper.addEventListener("click", function (e) {
+        if (e.target !== adviceForm && e.target === adviceFormWrapper) {
+          console.log("ookk");
+          adviceFormWrapper.style.display = "none";
+        }
+      });
+
+      document
+        .querySelector(".newsletter")
+        .addEventListener("submit", (event) => {
+          document.querySelector("#newsletter").value = "";
+        });
+    </script>
+    <script src="carousel.js"></script>
+    <script src="submitForm.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-storage.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAF2YCGKAfyEwvEAtqVuLsbjY4A6z8A5GI",
+        authDomain: "toonland-1007a.firebaseapp.com",
+        projectId: "toonland-1007a",
+        storageBucket: "toonland-1007a.appspot.com",
+        messagingSenderId: "724505599598",
+        appId: "1:724505599598:web:f30ef84364adf456ca507f",
+        measurementId: "G-PLQ6HP0TC8",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
   </body>
 </html>

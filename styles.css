@@ -212,6 +212,7 @@ h3 {
 .samples-heading {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 1rem;
 }
 
@@ -238,16 +239,20 @@ h3 {
 .resume-heading .contact {
   align-self: flex-start;
 }
-
+.resume-slider {
+  overflow-x: hidden;
+}
 .resume-imgs {
   display: flex;
+  flex-direction: row;
   gap: 2rem;
-  overflow: hidden;
   z-index: 5;
 }
 
-.resume-imgs img {
-  max-height: 400px;
+.resume-imgs .resume-item {
+  background-color: red;
+  max-height: 270px;
+  cursor: pointer;
 }
 
 .arrow {
@@ -258,6 +263,13 @@ h3 {
   width: fit-content;
   display: flex;
   gap: 0.6rem;
+  z-index: 10;
+}
+
+.arrow strong,
+.arrow span {
+  cursor: pointer;
+  user-select: none;
 }
 
 .our-process img {
@@ -292,6 +304,11 @@ table {
 td {
   padding: 0.5rem 0;
 }
+.list {
+  display: flex;
+  justify-content: center;
+  overflow: scroll;
+}
 
 .list1 {
   padding: 1rem;
@@ -300,7 +317,12 @@ td {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  font-size: var(--font-size-3);
+}
+
+.list1 p {
+  line-height: 1.2 !important;
+  font-size: 0.8rem !important;
+  font-family: var(--font-para) !important;
 }
 
 .samples-heading {
@@ -399,7 +421,7 @@ td {
 
 .job-search .resume-heading {
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 1.4rem;
 }
 
 .job-search img {
@@ -557,6 +579,113 @@ td {
   padding-top: 2rem;
 }
 
+.advice-form-wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  /* transform: translate(-50%, -50%); */
+  background: rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 999;
+}
+
+.advice-form-wrapper .advice-form {
+  overflow: scroll;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  min-width: 400px;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.advice-form-wrapper p {
+  font-family: var(--font-heading);
+}
+
+.advice-form-wrapper input,
+.advice-form-wrapper textarea,
+.advice-form-wrapper button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  width: 100%;
+  border: 1.5px solid #f4bb44;
+  font-family: var(--font-heading);
+}
+
+.advice-form-wrapper button {
+  border: 0;
+  background-color: #f4bb44;
+  font-family: var(--font-heading);
+  color: white;
+  cursor: pointer;
+}
+
+.advice-form-wrapper button:disabled,
+button[disabled] {
+  cursor: not-allowed;
+  background-color: #e9d5ac;
+}
+
+.advice-form-wrapper input::placeholder,
+.advice-form-wrapper textarea::placeholder,
+.advice-form-wrapper button::placeholder {
+  font-family: var(--font-heading);
+}
+
+.advice-form-wrapper label,
+.advice-form-wrapper label,
+.advice-form-wrapper label {
+  font-family: var(--font-heading);
+}
+
+.gender {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.gender div {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+progress {
+  width: 100%;
+  margin-top: 2px;
+}
+.close-form {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 100%;
+  border: 1px solid #f4bb44;
+  padding: 0.3rem;
+  line-height: 70%;
+  font-family: var(--font-heading);
+  cursor: pointer;
+  z-index: 999;
+  /* user-select: none; */
+}
 @media (min-width: 700px) {
   h1 {
     font-family: var(--font-heading);
@@ -598,9 +727,9 @@ td {
     margin-bottom: 3rem;
     width: 40rem;
   }
-  .resume .resume-heading:nth-child(1) {
-    /* background: red; */
-    margin-bottom: 3rem;
+  .res {
+    /* background-color: red; */
+    margin-bottom: 3.5rem;
   }
 
   .resume,
@@ -653,12 +782,19 @@ td {
   .resume .resume-heading {
     grid-column: 1/-1;
   }
+
+  /* .resume-slider img {
+    max-height: 100%;
+    min-height: 100%;
+    place-self: center;
+  } */
+
   .samples-heading,
   .our-process,
   .pricing,
   .testimonials {
     background-color: white;
-    max-height: 439px;
+    /* max-height: 439px; */
     min-height: 409px;
     padding: 2rem;
     border-radius: 3rem;
@@ -670,8 +806,19 @@ td {
     text-align: center;
     margin-top: 3rem;
     background-color: rgba(255, 255, 255, 0);
-    max-width: 60rem;
+    /* max-width: 60rem; */
     margin: 5rem auto 0;
+    /* background-color: red; */
+  }
+  .testimonials .slide-track {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .testimonials p,
+  .testimonials span {
+    font-size: 1rem !important;
+    font-family: var(--font-para);
   }
 
   .pricing .plans {
@@ -764,4 +911,42 @@ td {
     height: 100%;
     justify-content: space-evenly;
   }
+}
+
+.avatars-container {
+  display: flex;
+  width: inherit;
+  height: 250px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  /* background-color: red; */
+}
+
+.avatars {
+  position: relative;
+  display: flex;
+  gap: 50px;
+  transition: transform 500ms;
+  justify-content: center;
+}
+
+.avatar-item {
+  width: 145px;
+  height: 145px;
+  background-size: cover;
+  border-radius: 1rem;
+  border: 2px solid #f4bb44;
+  transition: transform 500ms;
+  transition-timing-function: cubic-bezier(0.22, 0.11, 0.67, 0.55);
+}
+
+.current {
+  transform: scale(1.3);
+  border: 2px solid #000;
+}
+
+.current:hover {
+  cursor: pointer;
 }
