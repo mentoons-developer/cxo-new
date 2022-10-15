@@ -601,9 +601,9 @@ td {
 
   max-height: 90vh;
   overflow-y: scroll;
-  /* top: 50%; */
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   background-color: white;
   min-width: 400px;
   padding: 2rem;
