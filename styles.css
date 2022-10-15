@@ -598,14 +598,15 @@ td {
 .advice-form-wrapper .advice-form {
   overflow: scroll;
   position: absolute;
-  top: 50%;
+  /* top: 50%; */
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   background-color: white;
   min-width: 400px;
   padding: 2rem;
   border-radius: 1rem;
   margin: auto;
+  margin-top: 5rem;
 
   display: flex;
   flex-direction: column;
@@ -953,6 +954,7 @@ progress {
 
 @media (max-width: 500px) {
   .advice-form-wrapper .advice-form {
+    margin-top: 2rem;
     width: 90vw;
     min-width: 90vw;
     max-width: 90vw;
