@@ -950,3 +950,20 @@ progress {
 .current:hover {
   cursor: pointer;
 }
+
+@media (max-width: 500px) {
+  .advice-form-wrapper .advice-form {
+    width: 90vw;
+    min-width: 90vw;
+    max-width: 90vw;
+    padding: 1rem;
+    /* margin: 2rem; */
+    /* background-color: red; */
+  }
+  .newsletter button {
+    font-size: 0.9rem;
+  }
+  .newsletter input::-webkit-input-placeholder {
+    font-size: 0.9rem;
+  }
+}
