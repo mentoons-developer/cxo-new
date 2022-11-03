@@ -19,10 +19,10 @@
       onload="if(submitted){window.location='submission.html'}"
     ></iframe>
     <div class="homepage">
-      <div class="header">
+      <!-- <div class="header">
         <p>03 OCT, 2022</p>
         <img src="./assets/icons/hamburger.png" alt="call" srcset="" />
-      </div>
+      </div> -->
 
       <div class="top">
         <div class="logo">
@@ -33,9 +33,9 @@
           <p>Creating CXO Stories</p>
         </div>
 
-        <div class="contact">
+        <div style="cursor: pointer" id="open-form" class="contact">
           <img src="./assets/icons/call.png" alt="call" srcset="" />
-          <p>Contact</p>
+          <p>Contact us</p>
         </div>
       </div>
       <div>
@@ -57,51 +57,60 @@
         <div class="services">
           <ul>
             <li>
-              <img src="./assets/icons/resume-writing.png" alt="" srcset="" />
-              <p>
-                Resume <br />
-                Writing
-              </p>
+              <a href="#resume-nav">
+                <img src="./assets/icons/resume-writing.png" alt="" srcset="" />
+                <p>
+                  Resume <br />
+                  Writing
+                </p>
+              </a>
+            </li>
+
+            <li>
+              <a href="#job-search-nav">
+                <img
+                  src="./assets/icons/job-search-advice.png"
+                  alt=""
+                  srcset=""
+                />
+                <p>
+                  Job-Search <br />
+                  Advice
+                </p></a
+              >
             </li>
             <li>
-              <img
-                src="./assets/icons/job-search-advice.png"
-                alt=""
-                srcset=""
-              />
-              <p>
-                Job-Search <br />
-                Advice
-              </p>
+              <a href="#personal-branding-nav">
+                <img
+                  src="./assets/icons/personal-branding solutions.png"
+                  alt=""
+                  srcset=""
+                />
+                <p>
+                  Personal <br />
+                  Branding
+                </p></a
+              >
             </li>
             <li>
-              <img
-                src="./assets/icons/personal-branding solutions.png"
-                alt=""
-                srcset=""
-              />
-              <p>
-                Personal <br />
-                Branding
-              </p>
-            </li>
-            <li>
-              <img
-                src="./assets/icons/social-media-management.png"
-                alt=""
-                srcset=""
-              />
-              <p>
-                Social Profile <br />
-                Management
-              </p>
+              <a href="#social-profile-nav">
+                <img
+                  src="./assets/icons/social-media-management.png"
+                  alt=""
+                  srcset=""
+                />
+                <p>
+                  Social Profile <br />
+                  Management
+                </p></a
+              >
             </li>
           </ul>
         </div>
       </div>
     </div>
 
-    <div class="resume">
+    <div id="resume-nav" class="resume">
       <div class="resume-heading">
         <h2 class="spacedown res">
           Resume
@@ -110,7 +119,7 @@
             Writing</span
           >
         </h2>
-        <div class="contact">
+        <div style="cursor: pointer;" id="open-form" class="contact">
           <img src="./assets/icons/call.png" alt="call" srcset="" />
           <p>Let's connect</p>
         </div>
@@ -196,6 +205,8 @@
         <div class="resume-heading">
           <h3>Resume <span style="color: #f4bb44"> pricing</span></h3>
         </div>
+
+        <!-- +914461710444 1934 -->
 
         <div class="plans">
           <table>
@@ -368,7 +379,7 @@
       </div>
     </div>
 
-    <div class="job-search">
+    <div id="job-search-nav" class="job-search">
       <div class="resume-heading">
         <h2>
           Job Search <br />
@@ -399,7 +410,7 @@
       </div>
     </div>
 
-    <div class="personal-branding">
+    <div id="personal-branding-nav" class="personal-branding">
       <div class="resume-heading">
         <h2>
           Personal Branding <br />
@@ -502,7 +513,7 @@
       </div>
     </div>
 
-    <div class="social-profile">
+    <div id="social-profile-nav" class="social-profile">
       <div class="resume-heading">
         <h2>
           Social Profile<br />
@@ -637,17 +648,17 @@
         </h3>
       </div>
       <form
-        action="https://docs.google.com/forms/d/e/1FAIpQLSf3PKdG-ifTZDxDw0VyerGrfxh39Ir91TYbhD367EJsXBuCjg/formResponse"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSfsIz7-QjPzX6FBEwokm_-Sekz8jTuu_q9H7ldil75mN9Ge7w/formResponse"
         class="newsletter"
         method="post"
         target="hiddenConfirm"
         onsubmit="submitted=true"
       >
         <input
-          type="text"
-          name="entry.1290487271"
+          type="email"
+          name="entry.1968200041"
           placeholder="Enter Email address"
-          id="newsletter"
+          id="newsletterid"
           required
         />
         <button type="submit" style="cursor: pointer">
@@ -675,7 +686,7 @@
     <div class="advice-form-wrapper">
       <form
         class="advice-form"
-        action="https://docs.google.com/forms/d/e/1FAIpQLSeSe2-XClbv7LZR4eMm7OgXjsY6zswnWwPUbLrTVV-dSnIPaw/formResponse"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSf8QzWQeh3-2OKgXHdqdtmOFe0vrpqMeAvWWEf5LbC0CfuxsA/formResponse"
         method="post"
         target="hiddenConfirm"
         onsubmit="submitted=true"
@@ -685,7 +696,7 @@
         <input
           required
           placeholder="name"
-          name="entry.1265337002"
+          name="entry.1960989593"
           type="text"
           id=""
           minlength="4"
@@ -695,38 +706,28 @@
           <div>
             <input
               required
-              name="entry.1739925046"
+              name="entry.1200180141"
               type="radio"
               value="Male"
               id=""
             />
-            <label for="entry.1739925046">Male</label>
+            <label>Male</label>
           </div>
           <div>
             <input
               required
-              name="entry.1739925046"
+              name="entry.1200180141"
               type="radio"
               value="Female"
               id=""
             />
-            <label for="entry.1739925046">Female</label>
-          </div>
-          <div>
-            <input
-              required
-              name="entry.1739925046"
-              type="radio"
-              value="Prefer not to say"
-              id=""
-            />
-            <label for="entry.1739925046">Prefer not to say</label>
+            <label>Female</label>
           </div>
         </div>
         <input
           required
           placeholder="age"
-          name="entry.317558365"
+          name="entry.1767693923"
           type="number"
           id=""
           minlength="2"
@@ -735,7 +736,7 @@
         <input
           required
           placeholder="contact"
-          name="entry.1431518457"
+          name="entry.1830610268"
           type="number"
           id=""
           minlength="9"
@@ -744,26 +745,27 @@
         <input
           required
           placeholder="email"
-          name="entry.1888570129"
+          name="entry.634597972"
           type="email"
           id=""
         />
         <input
           required
           placeholder="url"
-          name="entry.334923532"
+          name="entry.533941498"
           type="url"
           id="firebaseUrl"
           style="display: none"
         />
         <textarea
           placeholder="note"
-          name="entry.1628468164"
+          name="entry.122959345"
           id=""
           rows="4"
           minlength="10"
           maxlength="120"
         ></textarea>
+
         <div>
           <input required type="file" id="files" />
           <progress
@@ -772,6 +774,19 @@
             max="100"
             id="progress"
           ></progress>
+        </div>
+        <div class="gender">
+          <div>
+            <input
+              type="checkbox"
+              id="free-call"
+              name="entry.520151538"
+              value="I need a complimentary call !"
+            />
+            <label for="entry.520151538"
+              >I want a 10mins complimentary call!</label
+            >
+          </div>
         </div>
         <button disabled id="submit" type="submit">Submit</button>
       </form>
@@ -792,11 +807,11 @@
         }
       });
 
-      document
-        .querySelector("#open-form")
-        .addEventListener("click", function () {
+      document.querySelectorAll("#open-form").forEach((item) =>
+        item.addEventListener("click", function () {
           adviceFormWrapper.style.display = "block";
-        });
+        })
+      );
 
       adviceFormWrapper.addEventListener("click", function (e) {
         if (e.target !== adviceForm && e.target === adviceFormWrapper) {
@@ -804,12 +819,6 @@
           adviceFormWrapper.style.display = "none";
         }
       });
-
-      document
-        .querySelector(".newsletter")
-        .addEventListener("submit", (event) => {
-          document.querySelector("#newsletter").value = "";
-        });
     </script>
     <script src="carousel.js"></script>
     <script src="submitForm.js"></script>
@@ -829,5 +838,12 @@
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
     </script>
+    <script></script>
   </body>
 </html>
+
+<!-- https://docs.google.com/forms/d/e/1FAIpQLSfRr_clSgRIEMFEU_qiNScZfOaqyNYqOJ8VlnxifJzOFTk2ew/viewform?usp=pp_url&entry.1775809205=ok&entry.470856452=female&entry.1392203952=23&entry.380413360=24234&entry.414770631=o@m.in&entry.2039028508=lo.com&entry.300340254=I+need+a+complimentary+call&entry.331713446=okoko -->
+
+<!-- I need a complimentary call ! -->
+
+<!-- https://docs.google.com/forms/d/e/1FAIpQLSf8QzWQeh3-2OKgXHdqdtmOFe0vrpqMeAvWWEf5LbC0CfuxsA/viewform?usp=pp_url&entry.1960989593=asdasd&entry.1200180141=Male&entry.1767693923=age&entry.1830610268=contact&entry.634597972=email&entry.122959345=note&entry.533941498=url&entry.520151538=I+need+a+complimentary+call+! -->
